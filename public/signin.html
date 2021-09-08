@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="icon" href="images/vslogo.png.jpg" type="image/icon type">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="configFirebase.js"></script>
+    <script src="api.js"></script>
+    
+</head>
+<body>
+    <div class="main" style="margin: 35px 0;">
+    <h1 style="margin: 45px;">Veterinary Health Services</h1>
+    <form class="form" onsubmit="signin(event);return false;"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <div class="container">
+            <div class="text-center m-2">
+                <img src="images/vslogo.png.jpg">
+            </div>
+          <h2 class="display-5">Sign In</h2>
+          <hr>
+          <div class="alert alert-danger" id="alert" role="alert">
+          </div>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" id="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" id="psw" required>
+      
+          <div class="clearfix">
+            <button type="submit" class="signupbtn">Sign In</button>
+          </div>
+          
+          <div class="text-center my-2">
+            Don't have an account? <a href="signup.html">Sign Up</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    
+    <script src="signin.js"></script>
+</body>
+</html>

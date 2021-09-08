@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Appointments</title> 
+    <link rel="icon" href="images/vslogo.png.jpg" type="image/icon type">   
+    <!-- <link rel="stylesheet" href="bookAppointment.css"> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="home.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="configFirebase.js"></script>
+    <script src="signout.js"></script>
+    <script src="api.js"></script>
+    <script src="checkLogin.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img class="logo" src="images/vslogo.png.jpg">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html"><strong>Home</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html"><strong>Services</strong> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="bookAppointment.html"><strong>Book an appointment</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="viewAppointments.html"><strong>View Appointments</strong></a>
+              </li>                 
+            </ul>
+            <div class="ml-auto nav-item float-right">
+              <button class="btn btn-success" onclick="signout()"><strong>Signout</strong></button>
+            </div>
+          </div>
+        </div>             
+    </nav>
+    <div class="container">
+        <h4 id="nameHeader" class="text-center mt-4"><i class="fa fa-user-circle-o text-success" aria-hidden="true"></i> Hi, </h4>
+        <h1 class="display-5 text-center mt-2 mb-5">Your Appointments</h1>
+        <div class="justify-content-center" style="display: flex;" id="spinner">
+            <div class="spinner-border text-success"></div>
+          </div>
+        <div id="allCards"></div>
+        
+    </div>
+    <script src="viewAppointments.js"></script>
+</body>
+</html>
